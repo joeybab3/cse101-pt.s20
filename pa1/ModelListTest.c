@@ -556,7 +556,7 @@ uint8_t runTest(List *pA, List *pB, int test) {
     case Empty_copyList:
       {
         List C = copyList(A);
-        bool res = !equals(A, C);
+        bool res = (!equals(A, C) || A == C);
         freeList(&C);
         if (res) return 1;
         return 0;
@@ -567,7 +567,7 @@ uint8_t runTest(List *pA, List *pB, int test) {
         prepend(A, 1);
         moveFront(A);
         List C = copyList(A);
-        bool res = (index(A) != 0 || !equals(A, C));
+        bool res = (index(A) != 0 || !equals(A, C) || A == C);
         freeList(&C);
         if (res) return 1;
         return 0;
