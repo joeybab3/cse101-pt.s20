@@ -4,7 +4,7 @@ SRCDIR=https://raw.githubusercontent.com/houi-lin/cse101-pt.s20/master/pa2
 NUMTESTS=5
 PNTSPERTEST=2
 let MAXPTS=$NUMTESTS*$PNTSPERTEST
-TIME=5
+TIME=12
 
 if [ ! -e backup ]; then
   mkdir backup
@@ -35,7 +35,7 @@ echo "Press enter to continue"
 read verbose
 for NUM in $(seq 1 $NUMTESTS); do
   rm -f outfile$NUM.txt
-  timeout 10 ./Arithmetic infile$NUM.txt outfile$NUM.txt &> garbage >> garbage #all stdout/stderr thrown away
+  timeout "${TIME}" ./Arithmetic infile$NUM.txt outfile$NUM.txt &> garbage >> garbage #all stdout/stderr thrown away
   diff -bBwu outfile$NUM.txt model-outfile$NUM.txt > diff$NUM.txt &>> diff$NUM.txt
   echo "Arithmetic Test $NUM:"
   echo "=========="
