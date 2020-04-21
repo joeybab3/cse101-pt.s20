@@ -5,7 +5,6 @@
 #include <stdint.h>
 #include <signal.h>
 #include <setjmp.h>
-#include <math.h>
 
 #include "List.h"
 
@@ -638,7 +637,7 @@ int main (int argc, char **argv) {
 
   disable_exit_handler = 1;
 
-  uint8_t totalScore = (uint8_t)round(MAXSCORE*((float)testsPassed/NUM_TESTS));
+  uint8_t totalScore = (MAXSCORE - NUM_TESTS / 4) + testsPassed / 4;
 
   if (argc == 2 && testStatus != 255) printf("\nYou passed %d out of %d tests\n", testsPassed,
       NUM_TESTS);
