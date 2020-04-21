@@ -1,4 +1,4 @@
-# cmps101-pt.u19/pa3
+# cse101-pt.s20/pa3
 
 The following is a set of performance tests to run on your FindPath program. It
 takes six example input files and compares your results to our correct model
@@ -12,7 +12,7 @@ Run the following in your working directory (the directory you wrote your code
 in) to get the test script and example input files:
 
 ```bash
-curl https://raw.githubusercontent.com/houi-lin/cmps101-pt.u19/master/pa3/pa3.sh > pa3.sh
+curl https://raw.githubusercontent.com/houi-lin/cse101-pt.s20/master/pa3/pa3.sh > pa3.sh
 chmod +x pa3.sh
 ```
 
