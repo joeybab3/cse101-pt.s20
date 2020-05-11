@@ -20,7 +20,7 @@ chmod +x pa5.sh
 After installation, you can run the script with this line:
 
 ```bash
-./pa1.sh
+./pa5.sh
 ```
 
 It will print out the difference between your output and the correct output,
