@@ -22,11 +22,11 @@ echo ""
 echo ""
 
 gcc -c -std=c99 -Wall -g ModelDictionaryTest.c Dictionary.c
-gcc -o ModelLDictionaryTest ModelDictionaryTest.o Dictionary.o
+gcc -o ModelDictionaryTest ModelDictionaryTest.o Dictionary.o
 
 timeout 5 valgrind --leak-check=full -v ./ModelLDictionaryTest -v > DictionaryTest-out.txt 
 
 cat DictionaryTest-out.txt 
 
-rm -f *.o ModelLDictionaryTest* DictionaryTest-out.txt 
+rm -f *.o ModelDictionaryTest* DictionaryTest-out.txt 
 
