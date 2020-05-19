@@ -32,7 +32,7 @@ read verbose
 for NUM in $(seq 1 $NUMTESTS); do
   rm -f outfile$NUM.txt
   timeout 12 valgrind --leak-check=full -v Order infile$NUM.txt outfile$NUM.txt &> valgrind-out$NUM.txt
-  diff -bBwu outfile$NUM.txt model-outfile$NUM.txt &> diff$NUM.txt >> diff$NUM.txt
+  diff -bBwu outfile$NUM.txt Model-outfile$NUM.txt &> diff$NUM.txt >> diff$NUM.txt
   echo "Order Test $NUM:"
   echo "=========="
   cat diff$NUM.txt
