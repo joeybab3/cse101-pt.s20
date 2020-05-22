@@ -5,7 +5,7 @@
 
 SRCDIR=https://raw.githubusercontent.com/houi-lin/cse101-pt.s20/master/pa6
 
-EXE_ALL=( pa6-func-check.sh pa6-unit-check.sh pa6-make-check.sh )
+EXE_ALL=( pa6-func-check.sh pa6-func2-check.sh pa6-unit-check.sh pa6-make-check.sh )
 EXE_RANGE=$((${#EXE_ALL[*]} - 1))
 echo $EXE_RANGE
 for i in $(seq 0 $EXE_RANGE); do

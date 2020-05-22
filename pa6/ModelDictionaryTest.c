@@ -9,7 +9,7 @@
 #include "Dictionary.h"
 
 #define FIRST_TEST Empty_size
-#define MAXSCORE 54
+#define MAXSCORE 45
 
 static uint8_t testsPassed;
 static volatile sig_atomic_t testStatus;
@@ -399,7 +399,7 @@ int main (int argc, char **argv) {
 
   disable_exit_handler = 1;
 
-  uint8_t totalScore = testsPassed*3;
+  uint8_t totalScore = (testsPassed/2) * 5 + (testsPassed%2) * 3;
 
   if (argc == 2 && testStatus != 255) printf("\nYou passed %d out of %d tests\n", testsPassed,
       NUM_TESTS);
