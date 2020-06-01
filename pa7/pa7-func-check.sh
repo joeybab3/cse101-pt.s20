@@ -12,7 +12,7 @@ if [ ! -e backup ]; then
 fi
 
 
-cp *.c *.h Makefile backup   # copy all files of importance into backup
+cp *.cpp *.h Makefile README* backup   # copy all files of importance into backup
 
 for NUM in "${INPUTS[@]}"; do
    curl $SRCDIR/Model-out$NUM.txt > Model-out$NUM.txt

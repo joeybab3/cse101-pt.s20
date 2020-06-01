@@ -8,7 +8,7 @@ if [ ! -e backup ]; then
 fi
 
 
-cp *.c *.h Makefile backup   # copy all files of importance into backup
+cp *.cpp *.h Makefile REAMDE* backup   # copy all files of importance into backup
 
 curl $SRCDIR/ModelListTest.cpp > ModelListTest.cpp
 
