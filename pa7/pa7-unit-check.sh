@@ -15,7 +15,7 @@ curl $SRCDIR/ModelListTest.cpp > ModelListTest.cpp
 echo ""
 echo ""
 
-echo "Press Enter To Continue with Dictionary Unit Test"
+echo "Press Enter To Continue with List Unit Test"
 read verbose
 
 echo ""
