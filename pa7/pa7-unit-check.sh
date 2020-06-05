@@ -21,7 +21,7 @@ read verbose
 echo ""
 echo ""
 
-g++ -std=c++11 -Wall -c ModelListTest.cpp List.cpp
+g++ -std=c++11 -Wall -c -g ModelListTest.cpp List.cpp
 g++ -std=c++11 -Wall -o ModelListTest ModelListTest.o List.o
 
 timeout 5 valgrind --leak-check=full -v ./ModelListTest -v > ListTest-out.txt 
